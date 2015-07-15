@@ -8,6 +8,21 @@ function addTask(){
 	displayTasks();
 	saveTasks();
 }
+function editTask(itemToEdit){
+	var tempArray = [];
+	for(var i=0;i<taskList.length;i++){
+		if(itemToEdit !== i){ tempArray.push(taskList[i]); 
+		}
+		else{
+			var newTask = prompt("Edit your task", taskList[i]);
+			tempArray.push(newTask); 
+		}
+	}
+		taskList = tempArray();
+		displayTasks();
+	saveTasks();
+	
+}
 
 function removeTask(itemToRemove){
 	var tempArray = [];
